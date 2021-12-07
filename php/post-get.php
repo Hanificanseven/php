@@ -19,8 +19,9 @@ echo "<br><br>";*/
 
 //get İNPUT İLE GÖNDERİLEN VERİ AÇIK OLUR ADRES SATIRINDA GÖZÜKÜR
 
+// kullanici_id sorun oldu//
 
-
+$kullanici_id=151;
 ?>
 
 
@@ -30,10 +31,22 @@ Ad <input type="text" name="ad" placeholder="Adınızı Giriniz">
 Soyad <input type="text" name="soyad" placeholder="Soyadınızı Giriniz">
 <input type="submit" name="Gönder" value="Gönder">
 
+
+<button> <a href="islem.php?kullanici_id=<?php echo $kullanici_id ?>" class="btn" >Kullanıcıyı Sil. </a></button>
+
 </form>
 
+<?php
 
 
+
+
+
+
+
+
+
+?>
 
 
 

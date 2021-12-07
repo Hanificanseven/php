@@ -1,5 +1,5 @@
 <?php
-
+$db;
 try {
     $host="localhost";
     $dbname="forlog";
