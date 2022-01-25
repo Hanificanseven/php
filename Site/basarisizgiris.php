@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="Tr">
 
@@ -134,23 +135,30 @@ KAYIT KISMI KAYIT KISMI
     <body>
 
         <div id="id02" class="modal">
-            <form class="modal-content animate" action="/action_page.php">
+            <form class="modal-content animate" action="kullanici.php" method='POST'>
                 <div class="container">
                     <h1>Kayıt Ol</h1>
                     <p>Sitede işlem yapabilmek için lütfen üye olun.</p>
                     <hr>
-                    <label for="email"><b>E-Posta</b></label>
+                                        
+                  </div>
+                  <label for="email"><b>E-Posta</b></label>
                     <input type="text" placeholder="E-Posta " name="email" required>
 
                     <label for="psw"><b>Şifre</b></label>
                     <input type="password" placeholder="Şifrenizi Girin" name="psw" required>
 
-                    <label for="psw-repeat"><b>Şifrenizi Tekrar Girin</b></label>
-                    <input type="password" placeholder="Şifrenizi Tekrar Giriniz" name="psw-repeat" required>
+                    <label for="psw"><b>Şifreyi Tekrar </b></label>
+                    <input type="password" placeholder="Şifrenizi Girin" name="psw2" required>
 
+                    <label for="name"><b>Ad</b></label>
+                    <input type="text" placeholder="Adınız" name="firstname" required>
+
+                    <label for="last-name"><b>Soyad</b></label>
+                    <input type="text" placeholder="Soyadınız" name="lastname" required>
                     <label>
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Beni Hatırla
-      </label>
+  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Beni Hatırla
+</label>
 
                     <p>Kayıt Olarak Bunları Kabul Etmiş Olursunuz. <a href="#" style="color:dodgerblue">Kurallar cart curt</a>.</p>
 

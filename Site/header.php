@@ -2,6 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php {
+    $email = $_SESSION['email'];
+$kullanicisor=$db->prepare("select * from user where email='{$email}' " );
+
+$kullanicisor->execute();
+
+$say=$kullanicisor->rowCount();
+$kullanicicek=$kullanicisor->FETCH(PDO::FETCH_ASSOC);
+}
+?>
+
+
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +35,7 @@
     <!--======== Navbar =======-->
 
     <!-- ==========header mega navbar=======-->
+    
     <div class="top-menu-bottom932">
         <nav class="navbar navbar-default">
             <div class=".container-xxl">
@@ -42,7 +57,8 @@
     <!--    breadcumb of category -->
     <section class="header-descriptin329">
         <div class="container">
-            <h3>Forum</h3>
+        <a class="navbar-header" href="settings.php"> <?php echo $kullanicicek['firstName'] ." ". $kullanicicek['lastName']      ?> </a>
+        
         </div>
     </section>
 <!--    body content-->

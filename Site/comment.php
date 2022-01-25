@@ -1,8 +1,15 @@
 <?php 
+
 if(isset($_POST['yorumEkle'])){
-    $commentAdd = $db->prepare("INSERT INTO comment(user_id,post_id,comment) values(1,{$_GET['id']},'".$_POST['comment']."')");
+    $email = $_SESSION['email'];
+       $users = $db->prepare("SELECT * FROM user WHERE email = '{$email}'");
+    $users->execute();
+    $user = $users->fetch();
+$id = $user['id'];
+    $commentAdd = $db->prepare("INSERT INTO comment(user_id,post_id,comment) values({$id},{$_GET['id']},'".$_POST['comment']."')");
     $commentAdd->execute();
     }
+
 $comments = $db->prepare("SELECT * FROM comment WHERE post_id ={$_GET['id']}");
 $comments->execute();
 

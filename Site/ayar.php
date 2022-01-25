@@ -1,5 +1,6 @@
 <?php
 $db;
+session_start();
 try {
     $host="localhost";
     $dbname="forlog";
